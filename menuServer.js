@@ -55,13 +55,18 @@ connection.on('error',onError);
 									atm_value[n]=0;
 									connection.write("main menu:\r\na)menu 1\r\nb)menu 2\r\nc)menu 3\r\nd)exit conection\r\n");
 									xxx[n]=1;
+								}else{
+									if (t==0)connection.write("main menu:\r\na)menu 1\r\nb)menu 2\r\nc)menu 3\r\nd)exit conection\r\n");
+									if (t==1)connection.write("menu 1:\r\na)goto main menu\r\n");
+									if (t==2)connection.write("menu 2:\r\na)goto main menu\r\n");
+									if (t==3)connection.write("menu 3:\r\na)goto main menu\r\n");
 								}
 							}
 						}
 					}
 				}
 				
-				console.log(ref+t.toString());
+				console.log(ref+" "+t.toString());
 			}
 		}
 		if(z==0){
@@ -69,7 +74,7 @@ connection.on('error',onError);
 			atm_value[atm_id_count]=0;
 			atm_id_count++;
 			connection.write("main menu:\r\na)menu 1\r\nb)menu 2\r\nc)menu 3\r\nd)exit conection\r\n");
-			console.log(ref+t.toString());
+			console.log(ref+" "+t.toString());
 		}
 		
 		
